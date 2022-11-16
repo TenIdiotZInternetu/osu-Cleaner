@@ -1,0 +1,35 @@
+﻿<Window x:Class="osu_cleaner_wpf.InProgressWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:osu_cleaner_wpf"
+        mc:Ignorable="d"
+        Background="#FF272727" Height="260" MinHeight="260" Width="280">
+
+    <Window.Resources>
+        <Style TargetType="ListBox">
+            <Setter Property="Background" Value="#FF151515"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderBrush" Value="#FF707070"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <Label Name="boxLabel" Style="{StaticResource labelStyle}" Grid.Row="1" Grid.Column="1"/>
+        <ListBox Grid.Row="2" Grid.Column="1"/>
+    </Grid>
+</Window>
